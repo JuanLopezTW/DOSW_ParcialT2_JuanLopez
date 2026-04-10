@@ -1,3 +1,8 @@
+## juan lopez, nicolas ibañez
+
+
+
+
 ## punto 1 funcionalidades
 
 ### registro de usuario
