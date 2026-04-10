@@ -8,6 +8,7 @@ POST
 #### b) 
 No idempotente
 
+
 #### c) 
 Cada llamada crea un nuevo recurso (usuario) en el sistema. Dos requests con los mismos datos generan conflicto o duplicado, no el mismo resultado.
 
@@ -428,6 +429,20 @@ auntenticacion: verificar que alguien es alguien
 autorizacion: ese alguien esta permitido de hacer algo
 integridad: ese algo debe de seguir ciertas reglas, para no alterar y dañar la base de datos.
 
+## 4: Genere el diagrama de componentes específicos del sistema ECIXPRESS
+
+![diagramaComponentesGeneral.png](docs%2Fuml%2FDiagramasDeComponentes%2FdiagramaComponentesGeneral.png)
+
 ## 5: ¿Qué problemas pueden surgir si no se separan correctamente las capas dentro de un proyecto de software?
 #### respuesta:
 la lectura del proyecto se vuelve muy complicada, los niveles de complejidad a pedir una fncionalidad no son optimos, dificulta encontrar errores, se dificulta añadir funcionalidades, se dificulta identificar deudas.
+
+## 8:  Genere el diagrama de clases de los modelos y responda: ¿Qué patrón de software usaría para manejar los estados del pedido y por qué?
+
+![DiagramaDeClases.png](docs%2Fuml%2FDiagramaClase%2FDiagramaDeClases.png)
+
+#### RTA: se podria el patron de diseño state ya que nos permite manejar el estado  como un objeto
+
+## 9 Genere el diagrama entidad-relación para el marco relacional de persistencia.
+
+![DiagramaEndidadRelacionRelacional.png](docs%2Fuml%2FDiagramaEntidadRelacion%2FDiagramaEndidadRelacionRelacional.png)
