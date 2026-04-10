@@ -424,10 +424,14 @@ las validaciones de input son aquellas que verifican lo escrito en los campos se
 
 ## 3: Explique la diferencia entre autenticación, autorización e integridad.
 #### respuesta: 
-auntenticacion: verificar que alguien es alguien
-autorizacion: ese alguien esta permitido de hacer algo
+auntenticacion: verificar que alguien es alguien <br>
+autorizacion: ese alguien esta permitido de hacer algo <br>
 integridad: ese algo debe de seguir ciertas reglas, para no alterar y dañar la base de datos.
 
 ## 5: ¿Qué problemas pueden surgir si no se separan correctamente las capas dentro de un proyecto de software?
 #### respuesta:
 la lectura del proyecto se vuelve muy complicada, los niveles de complejidad a pedir una fncionalidad no son optimos, dificulta encontrar errores, se dificulta añadir funcionalidades, se dificulta identificar deudas.
+## 7: ¿Cuáles son las diferencias entre un validador, una utilidad y un servicio?
+#### respuesta: 
+un validador verifica que se cumplan las reglas de negocio, una utilidad sirve como dice su nombre para partes no funcionales pero importatntes (ej: creador de UUID), y servicios implican las funcionalidades del sistema
+
