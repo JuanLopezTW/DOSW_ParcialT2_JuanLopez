@@ -418,3 +418,7 @@ Response 200 OK:
 | No autenticado | 401 | No autorizado                                                      |
 | Error interno | 500 | Error interno del servidor                                         |
 
+## 2: Explique la diferencia entre Validaciones de input y Validaciones de negocio
+#### respuesta:
+las validaciones de input son aquellas que verifican lo escrito en los campos sea adecuado, y las de negocio hacen parte de validaciondes de logica.
+
