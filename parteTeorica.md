@@ -425,8 +425,8 @@ las validaciones de input son aquellas que verifican lo escrito en los campos se
 
 ## 3: Explique la diferencia entre autenticación, autorización e integridad.
 #### respuesta: 
-auntenticacion: verificar que alguien es alguien
-autorizacion: ese alguien esta permitido de hacer algo
+auntenticacion: verificar que alguien es alguien <br>
+autorizacion: ese alguien esta permitido de hacer algo <br>
 integridad: ese algo debe de seguir ciertas reglas, para no alterar y dañar la base de datos.
 
 ## 4: Genere el diagrama de componentes específicos del sistema ECIXPRESS
@@ -437,6 +437,10 @@ integridad: ese algo debe de seguir ciertas reglas, para no alterar y dañar la 
 #### respuesta:
 la lectura del proyecto se vuelve muy complicada, los niveles de complejidad a pedir una fncionalidad no son optimos, dificulta encontrar errores, se dificulta añadir funcionalidades, se dificulta identificar deudas.
 
+## 7: ¿Cuáles son las diferencias entre un validador, una utilidad y un servicio?
+#### respuesta: 
+un validador verifica que se cumplan las reglas de negocio, una utilidad sirve como dice su nombre para partes no funcionales pero importatntes (ej: creador de UUID), y servicios implican las funcionalidades del sistema
+
 ## 8:  Genere el diagrama de clases de los modelos y responda: ¿Qué patrón de software usaría para manejar los estados del pedido y por qué?
 
 ![DiagramaDeClases.png](docs%2Fuml%2FDiagramaClase%2FDiagramaDeClases.png)
@@ -446,3 +450,4 @@ la lectura del proyecto se vuelve muy complicada, los niveles de complejidad a p
 ## 9 Genere el diagrama entidad-relación para el marco relacional de persistencia.
 
 ![DiagramaEndidadRelacionRelacional.png](docs%2Fuml%2FDiagramaEntidadRelacion%2FDiagramaEndidadRelacionRelacional.png)
+
