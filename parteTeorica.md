@@ -428,3 +428,6 @@ auntenticacion: verificar que alguien es alguien
 autorizacion: ese alguien esta permitido de hacer algo
 integridad: ese algo debe de seguir ciertas reglas, para no alterar y dañar la base de datos.
 
+## 5: ¿Qué problemas pueden surgir si no se separan correctamente las capas dentro de un proyecto de software?
+#### respuesta:
+la lectura del proyecto se vuelve muy complicada, los niveles de complejidad a pedir una fncionalidad no son optimos, dificulta encontrar errores, se dificulta añadir funcionalidades, se dificulta identificar deudas.
