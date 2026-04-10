@@ -422,3 +422,9 @@ Response 200 OK:
 #### respuesta:
 las validaciones de input son aquellas que verifican lo escrito en los campos sea adecuado, y las de negocio hacen parte de validaciondes de logica.
 
+## 3: Explique la diferencia entre autenticación, autorización e integridad.
+#### respuesta: 
+auntenticacion: verificar que alguien es alguien
+autorizacion: ese alguien esta permitido de hacer algo
+integridad: ese algo debe de seguir ciertas reglas, para no alterar y dañar la base de datos.
+
