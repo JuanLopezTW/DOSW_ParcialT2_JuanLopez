@@ -451,3 +451,16 @@ un validador verifica que se cumplan las reglas de negocio, una utilidad sirve c
 
 ![DiagramaEndidadRelacionRelacional.png](docs%2Fuml%2FDiagramaEntidadRelacion%2FDiagramaEndidadRelacionRelacional.png)
 
+## 13.Nuestro cliente quiere automatizar el proceso del ciclo de vida de la aplicación, sin embargo necesita entender cómo funciona, describa las etapas principales de un pipeline y en qué consiste cada una.
+
+#### RTA: Las pipe lines se componen principalmente de 5 partes 1. el build donde se verificara que todo lo referente a la compilacion del proyecto
+#### 2 Test: como su nombre lo indica se realizaran las pruebas definidas con ayuda de mvn test, parte 3 analisis realiza todo lo referente a los analisis de del codigo estatico como sonar y jacoco
+#### y el 4 por ultimo se realizaria el deply de la aplicacion mediante azure, o un docker
+
+## 14 ¿Qué sucede si una prueba falla en el pipeline? ¿Debe permitirse el despliegue? Justifique
+
+#### RTA: Si una prueba del pipeline falla el desarrollador debera verificar su codigo nuevamente ya que no cumpliria con la calidad estipulada por la pipeline
+
+## puntos adiccional juan lopez: + 0.2 Nicolas Ibañez: primer lugar 1.2 + 02 de participacion
+
+
