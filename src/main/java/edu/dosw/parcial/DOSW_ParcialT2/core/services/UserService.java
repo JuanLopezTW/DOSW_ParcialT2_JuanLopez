@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class UserService {
 
-    private final UserPersistenceRepository userRepository;
+    private final UserRepository userRepository;
     private final UserValidator userValidator;
     private final UserPersistenceMapper userPersistenceMapper;
     private final PasswordEncoder passwordEncoder;
@@ -31,12 +31,6 @@ public class UserService {
         log.info("usuario registrado con el email: {}", user.getEmail());
 
         return userPersistenceMapper.toDomain(saved);
-    }
-
-    public User findByEmail(String email) {
-        return userRepository.findByEmail(email)
-                .map(userPersistenceMapper::toDomain)
-                .orElseThrow(() -> new RuntimeException("User not found"));
     }
 
     public User login(String email, String password) {

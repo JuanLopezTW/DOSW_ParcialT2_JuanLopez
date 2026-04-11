@@ -1,6 +1,6 @@
 package edu.dosw.parcial.DOSW_ParcialT2.core.validators;
 
-import edu.dosw.parcial.DOSW_ParcialT2.persistence.repositories.UserPersistenceRepository;
+import edu.dosw.parcial.DOSW_ParcialT2.persistence.repositories.UserRepository;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class UserValidator {
 
-    private final UserPersistenceRepository userRepository;
+    private final UserRepository userRepository;
 
     public void validateEmailNotTaken(String email) {
         if (userRepository.existsByEmail(email)) {
