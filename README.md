@@ -445,6 +445,10 @@ integridad: Asegurarse que los datos no se hayan alterado en el transporte <br>
 #### respuesta:
 la lectura del proyecto se vuelve muy complicada, los niveles de complejidad a pedir una fncionalidad no son optimos, dificulta encontrar errores, se dificulta añadir funcionalidades, se dificulta identificar deudas.
 
+## 6: Genere el diagrama de componentes específicos del sistema ECIXPRESS
+
+![DiagramaDeComponentesEspecificos.jpeg](docs/uml/DiagramasDeComponentes/DiagramaDeComponentesEspecificos.jpeg)
+
 ## 7: ¿Cuáles son las diferencias entre un validador, una utilidad y un servicio?
 #### respuesta: 
 un validador verifica que se cumplan las reglas de negocio, una utilidad sirve como dice su nombre para partes no funcionales pero importatntes (ej: creador de UUID), y servicios implican las funcionalidades del sistema
