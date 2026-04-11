@@ -108,6 +108,11 @@
 	</dependencies>
 
 	<build>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+			</testResource>
+		</testResources>
 		<plugins>
 			<!-- Spring Boot -->
 			<plugin>
@@ -166,6 +171,14 @@
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<excludes>
+						<exclude>**/config/**</exclude>
+						<exclude>**/dtos/**</exclude>
+						<exclude>**/entities/**</exclude>
+						<exclude>**/DoswParcialT2Application.class</exclude>
+					</excludes>
+				</configuration>
 			</plugin>
 
 			<!-- SonarQube -->
