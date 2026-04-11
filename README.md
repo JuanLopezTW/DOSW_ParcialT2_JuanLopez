@@ -502,6 +502,13 @@ Invariantes del agregado.
 
 Emisión de eventos de dominio.
 
+## 12. Explique cómo las pruebas garantizan el cumplimiento de las reglas de negocio y la integridad del sistema.
+### Reglas de negocio: 
+Especificación ejecutable. Regresión automatizada. Cobertura de flujos alternativos. Firewall en pipeline CI/CD ante violación de políticas de dominio. Documentación viva del contrato funcional.
+
+### Integridad del sistema: 
+Atomicidad transaccional multi-agregado. Integridad referencial en persistencia. Control de concurrencia optimista. Contratos entre Bounded Contexts. Idempotencia ante reintentos. Consistencia eventual en proyecciones de lectura. Trazabilidad inmutable en auditoría.
+
 ## 13.Nuestro cliente quiere automatizar el proceso del ciclo de vida de la aplicación, sin embargo necesita entender cómo funciona, describa las etapas principales de un pipeline y en qué consiste cada una.
 
 #### RTA: Las pipe lines se componen principalmente de 5 partes 1. el build donde se verificara que todo lo referente a la compilacion del proyecto
