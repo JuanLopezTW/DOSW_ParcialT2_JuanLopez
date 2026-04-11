@@ -473,6 +473,35 @@ Order.userid sin el indice la base de datos recorreria toda la tabla Order en bu
 
 Order_item.orderId: con este indice solo se consultar los order items que esten asociados a dicho order en lugar de recorrer toda la tabla mejorando el tiempo de consulta
 
+
+## 11. 
+### Fases TDD:
+
+#### RED:
+Prueba unitaria fallida.
+#### GREEN:
+Implementación mínima funcional.
+
+#### REFACTOR:
+Mejora estructural del código (desacoplamiento, patrones).
+#### Casos de Prueba Iniciales:
+
+Happy Path: Creación exitosa de pedido con reducción de stock.
+
+Error de negocio: Stock insuficiente.
+
+Error de validación: Cantidad no válida (cero o negativa).
+
+Error de sistema: Entidad no encontrada (Cliente/Producto).
+
+#### Validaciones Clave Cubiertas:
+
+Transaccionalidad ACID.
+
+Invariantes del agregado.
+
+Emisión de eventos de dominio.
+
 ## 13.Nuestro cliente quiere automatizar el proceso del ciclo de vida de la aplicación, sin embargo necesita entender cómo funciona, describa las etapas principales de un pipeline y en qué consiste cada una.
 
 #### RTA: Las pipe lines se componen principalmente de 5 partes 1. el build donde se verificara que todo lo referente a la compilacion del proyecto
@@ -507,7 +536,7 @@ Datos del usuario(emal,numeros)
 Numeros de tarjetas,etc
 
 
-## 15 Como parte del MVP, el cliente requiere una validación visual del producto.
+## 16 Como parte del MVP, el cliente requiere una validación visual del producto.
 ## Diseñe en Figma las pantallas necesarias para el flujo de:
 ## ● Registro de usuario
 ## ● Inicio de sesión
