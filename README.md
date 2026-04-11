@@ -461,6 +461,14 @@ State: de esta manera los etados no dependerian de un if o un swich, se manejari
 
 ![DiagramaEndidadRelacionRelacional.png](docs%2Fuml%2FDiagramaEntidadRelacion%2FDiagramaEndidadRelacionRelacional.png)
 
+## 10.Proponga 2 índices que mejoren el rendimiento de las consultas de  ECIXPRESS y establezca con un criterio técnico el porque dan valor a la solución.
+
+### Indices: 
+
+Order.userid sin el indice la base de datos recorreria toda la tabla Order en busca de coincidencias, asi la busqueda seria directa
+
+Order_item.orderId: con este indice solo se consultar los order items que esten asociados a dicho order en lugar de recorrer toda la tabla mejorando el tiempo de consulta
+
 ## 13.Nuestro cliente quiere automatizar el proceso del ciclo de vida de la aplicación, sin embargo necesita entender cómo funciona, describa las etapas principales de un pipeline y en qué consiste cada una.
 
 #### RTA: Las pipe lines se componen principalmente de 5 partes 1. el build donde se verificara que todo lo referente a la compilacion del proyecto
