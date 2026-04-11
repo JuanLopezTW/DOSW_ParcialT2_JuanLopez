@@ -490,5 +490,27 @@ que verificara paso por paso que lo que se mando no rompa lo ya existente, asi e
 revisar el error corregirlo y volver a pasar por la verificacion de la pipeline para que de esta manera
 se permita el despliege si no hay fallos.
 
+## 15. Explique el concepto de logging en el manejo de errores:
 
-link figma: https://www.figma.com/design/nGV76l8xSfEPsvRQnUbU3k/ECIXPRESS?node-id=0-1&t=67h5V2vliGPAiAmS-1
+### a. ¿Qué información debería registrarse?
+
+La etiquetas de tiempo del error
+El tipo de error
+Mensaje con una descripcion del fallo
+Id de usuario
+
+### b. ¿Qué NO debería registrarse (por seguridad)?
+
+Contraseña
+Toker de acceso
+Datos del usuario(emal,numeros)
+Numeros de tarjetas,etc
+
+
+## 15 Como parte del MVP, el cliente requiere una validación visual del producto.
+## Diseñe en Figma las pantallas necesarias para el flujo de:
+## ● Registro de usuario
+## ● Inicio de sesión
+
+
+### link figma: https://www.figma.com/design/nGV76l8xSfEPsvRQnUbU3k/ECIXPRESS?node-id=0-1&t=67h5V2vliGPAiAmS-1
