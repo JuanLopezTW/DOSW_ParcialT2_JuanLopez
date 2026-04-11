@@ -171,6 +171,14 @@
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<excludes>
+						<exclude>**/config/**</exclude>
+						<exclude>**/dtos/**</exclude>
+						<exclude>**/entities/**</exclude>
+						<exclude>**/DoswParcialT2Application.class</exclude>
+					</excludes>
+				</configuration>
 			</plugin>
 
 			<!-- SonarQube -->

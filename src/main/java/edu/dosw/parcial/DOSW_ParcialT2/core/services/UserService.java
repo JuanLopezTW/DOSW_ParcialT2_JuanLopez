@@ -5,7 +5,7 @@ import edu.dosw.parcial.DOSW_ParcialT2.core.models.User;
 import edu.dosw.parcial.DOSW_ParcialT2.core.validators.UserValidator;
 import edu.dosw.parcial.DOSW_ParcialT2.persistence.entities.UserEntity;
 import edu.dosw.parcial.DOSW_ParcialT2.persistence.mappers.UserPersistenceMapper;
-import edu.dosw.parcial.DOSW_ParcialT2.persistence.repositories.UserPersistenceRepository;
+import edu.dosw.parcial.DOSW_ParcialT2.persistence.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class UserService {
 
-    private final UserPersistenceRepository userRepository;
+    private final UserRepository userRepository;
     private final UserValidator userValidator;
     private final UserPersistenceMapper userPersistenceMapper;
     private final PasswordEncoder passwordEncoder;

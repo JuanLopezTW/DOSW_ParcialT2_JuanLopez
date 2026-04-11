@@ -519,6 +519,8 @@ Numeros de tarjetas,etc
 
 [Swagger.MD](docs/PruebasSwagger/Swagger.MD)
 
+## Jacoco
 
+![Jacoco.PNG](docs/PruebasSwagger/Images/Jacoco.PNG)
 
 #### puntos adiccionales: juan lopez +0.2 nicolas ibañez: +1.2 (primer lugar biblioteca), +0.6 de bitacora cada uno (Ojala todos la hayan hecho D:)
