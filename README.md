@@ -514,3 +514,11 @@ Numeros de tarjetas,etc
 
 
 ### link figma: https://www.figma.com/design/nGV76l8xSfEPsvRQnUbU3k/ECIXPRESS?node-id=0-1&t=67h5V2vliGPAiAmS-1
+
+# Parte Practica
+
+[Swagger.MD](docs/PruebasSwagger/Swagger.MD)
+
+
+
+#### puntos adiccionales: juan lopez +0.2 nicolas ibañez: +1.2 (primer lugar biblioteca), +0.6 de bitacora cada uno (Ojala todos la hayan hecho D:)
