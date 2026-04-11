@@ -33,6 +33,12 @@ public class UserService {
         return userPersistenceMapper.toDomain(saved);
     }
 
+    public User findByEmail(String email) {
+        return userRepository.findByEmail(email)
+                .map(userPersistenceMapper::toDomain)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+    }
+
     public User login(String email, String password) {
         UserEntity entity = userRepository.findByEmail(email)
                 .orElseThrow(() -> new RuntimeException("Credenciales inválidas"));

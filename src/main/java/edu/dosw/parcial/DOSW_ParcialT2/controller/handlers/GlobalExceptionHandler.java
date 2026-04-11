@@ -1,5 +1,10 @@
 package edu.dosw.parcial.DOSW_ParcialT2.controller.handlers;
 
+import edu.dosw.parcial.DOSW_ParcialT2.core.exceptions.ActiveOrderAlreadyExistsException;
+import edu.dosw.parcial.DOSW_ParcialT2.core.exceptions.InvalidOrderStatusException;
+import edu.dosw.parcial.DOSW_ParcialT2.core.exceptions.OrderNotFoundException;
+import edu.dosw.parcial.DOSW_ParcialT2.core.exceptions.ProductNotFoundException;
+import edu.dosw.parcial.DOSW_ParcialT2.core.exceptions.ProductUnavailableException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +18,41 @@ import java.util.Map;
 @Slf4j
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+
+    @ExceptionHandler(ProductNotFoundException.class)
+    public ResponseEntity<Map<String, String>> handleProductNotFound(ProductNotFoundException e) {
+        Map<String, String> response = new HashMap<>();
+        response.put("message", e.getMessage());
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
+    }
+
+    @ExceptionHandler(ProductUnavailableException.class)
+    public ResponseEntity<Map<String, String>> handleProductUnavailable(ProductUnavailableException e) {
+        Map<String, String> response = new HashMap<>();
+        response.put("message", e.getMessage());
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
+    }
+
+    @ExceptionHandler(ActiveOrderAlreadyExistsException.class)
+    public ResponseEntity<Map<String, String>> handleActiveOrderAlreadyExists(ActiveOrderAlreadyExistsException e) {
+        Map<String, String> response = new HashMap<>();
+        response.put("message", e.getMessage());
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
+    }
+
+    @ExceptionHandler(OrderNotFoundException.class)
+    public ResponseEntity<Map<String, String>> handleOrderNotFound(OrderNotFoundException e) {
+        Map<String, String> response = new HashMap<>();
+        response.put("message", e.getMessage());
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
+    }
+
+    @ExceptionHandler(InvalidOrderStatusException.class)
+    public ResponseEntity<Map<String, String>> handleInvalidOrderStatus(InvalidOrderStatusException e) {
+        Map<String, String> response = new HashMap<>();
+        response.put("message", e.getMessage());
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
+    }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String, String>> handleValidationErrors(MethodArgumentNotValidException e) {
