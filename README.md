@@ -426,13 +426,16 @@ Response 200 OK:
 
 ## 2: Explique la diferencia entre Validaciones de input y Validaciones de negocio
 #### respuesta:
-las validaciones de input son aquellas que verifican lo escrito en los campos sea adecuado, y las de negocio hacen parte de validaciondes de logica.
+
+Input: Valida que los datos ingresados sean correctos o validos, no vacios, que no tengan valores no permitidos, etc
+
+Negocio: Validan las reglas internas de la aplicacion, por ejemplo que no se pueda agregar un producto sin stock
 
 ## 3: Explique la diferencia entre autenticación, autorización e integridad.
 #### respuesta: 
-auntenticacion: verificar que alguien es alguien <br>
-autorizacion: ese alguien esta permitido de hacer algo <br>
-integridad: ese algo debe de seguir ciertas reglas, para no alterar y dañar la base de datos.
+auntenticacion: Verificar que un usuario es quien dice ser <br>
+autorizacion: Verificar si un usuario tiene permisos para realizar cierta accion <br>
+integridad: Asegurarse que los datos no se hayan alterado en el transporte <br>
 
 ## 4: Genere el diagrama de componentes específicos del sistema ECIXPRESS
 
@@ -450,7 +453,9 @@ un validador verifica que se cumplan las reglas de negocio, una utilidad sirve c
 
 ![DiagramaDeClases.png](docs%2Fuml%2FDiagramaClase%2FDiagramaDeClases.png)
 
-#### RTA: se podria el patron de diseño state ya que nos permite manejar el estado  como un objeto
+Observer: este patron nos permitiria notificar a los servicios cada vez que el estado de un pedido pase a "en proceso" para poder permitir al stock actualizarse automaticamente
+
+State: de esta manera los etados no dependerian de un if o un swich, se manejarian como un objeto aparte, asi por ejemplo solo el "objeto" creado tendra la funcion de "cancelar"
 
 ## 9 Genere el diagrama entidad-relación para el marco relacional de persistencia.
 
@@ -459,14 +464,19 @@ un validador verifica que se cumplan las reglas de negocio, una utilidad sirve c
 ## 13.Nuestro cliente quiere automatizar el proceso del ciclo de vida de la aplicación, sin embargo necesita entender cómo funciona, describa las etapas principales de un pipeline y en qué consiste cada una.
 
 #### RTA: Las pipe lines se componen principalmente de 5 partes 1. el build donde se verificara que todo lo referente a la compilacion del proyecto
-#### 2 Test: como su nombre lo indica se realizaran las pruebas definidas con ayuda de mvn test, parte 3 analisis realiza todo lo referente a los analisis de del codigo estatico como sonar y jacoco
-#### y el 4 por ultimo se realizaria el deply de la aplicacion mediante azure, o un docker
+
+1. Construccion: compila el proyecto ademas de verificar que no hayan errores
+2. Test: ejecuta las pruebas unitarias con ayuda de mvn para comprobar que todo funcione correctamente
+3. Analisi: mediante jacoco y sonar se comprueban la cobertura y analisis estatico del codigo
+4. Construccion de imagen: construccion de una imagen para el despliege
+5. Deploy, Se despliega la aplicación en un entorno destinado desde una imagen
 
 ## 14 ¿Qué sucede si una prueba falla en el pipeline? ¿Debe permitirse el despliegue? Justifique
 
-#### RTA: Si una prueba del pipeline falla el desarrollador debera verificar su codigo nuevamente ya que no cumpliria con la calidad estipulada por la pipeline
-
-## puntos adiccional juan lopez: + 0.2 Nicolas Ibañez: primer lugar 1.2 + 02 de participacion
+Si una prueba falla no deberia permitirse el despliege ya que la pipeline existe como un "perro guardian :D"
+que verificara paso por paso que lo que se mando no rompa lo ya existente, asi el desarrollador debera
+revisar el error corregirlo y volver a pasar por la verificacion de la pipeline para que de esta manera
+se permita el despliege si no hay fallos.
 
 
 link figma: https://www.figma.com/design/nGV76l8xSfEPsvRQnUbU3k/ECIXPRESS?node-id=0-1&t=67h5V2vliGPAiAmS-1
